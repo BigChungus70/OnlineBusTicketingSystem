@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="5.0"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd">
+
+
+    <display-name>OnlineBusTicketingSystem</display-name>
+
+    <listener>
+        <listener-class>utility.GlobalInitializationHandler</listener-class>
+    </listener>
+    <!-- discounts  WHY ARE THEY IN DB TOO THEN??
+    <context-param>
+        <param-name>discount.student</param-name>
+        <param-value>0.20</param-value>
+    </context-param>
+    <context-param>
+        <param-name>discount.senior</param-name>
+        <param-value>0.30</param-value>
+    </context-param>
+    <context-param>
+        <param-name>discount.evening</param-name>
+        <param-value>0.15</param-value>
+    </context-param>
+    -->
+
+    <servlet>
+        <servlet-name>SearchTripServlet</servlet-name>
+        <servlet-class>controller.SearchTripServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchTripServlet</servlet-name>
+        <url-pattern>/SearchTripServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>controller.RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/RegistrationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>FareEstimationServlet</servlet-name>
+        <servlet-class>controller.FareEstimationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FareEstimationServlet</servlet-name>
+        <url-pattern>/FareEstimationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>PurchaseTicketServlet</servlet-name>
+        <servlet-class>controller.PurchaseTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PurchaseTicketServlet</servlet-name>
+        <url-pattern>/PurchaseTicketServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>HistoryServlet</servlet-name>
+        <servlet-class>controller.HistoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HistoryServlet</servlet-name>
+        <url-pattern>/HistoryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminSessionServlet</servlet-name>
+        <servlet-class>controller.AdminSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminSessionServlet</servlet-name>
+        <url-pattern>/AdminSessionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminRulesManagementServlet</servlet-name>
+        <servlet-class>controller.AdminRulesManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminRulesManagementServlet</servlet-name>
+        <url-pattern>/AdminRulesManagementServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminTripsManagementServlet</servlet-name>
+        <servlet-class>controller.AdminTripsManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminTripsManagementServlet</servlet-name>
+        <url-pattern>/AdminTripsManagementServlet</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
